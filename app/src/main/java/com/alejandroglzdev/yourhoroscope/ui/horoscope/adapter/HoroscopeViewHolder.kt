@@ -19,7 +19,7 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         }
     }
 
-    fun startRotationAnimation(view: View, callback:() -> Unit) {
+    private fun startRotationAnimation(view: View, callback:() -> Unit) {
         view.animate().apply {
             duration = 500
             interpolator = LinearInterpolator()
