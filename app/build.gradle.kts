@@ -59,6 +59,8 @@ dependencies {
 
     val nav_version= "2.7.1"
     val hilt_version= "2.48"
+    val retrofit_version= "2.9.0"
+    val cameraVersion = "1.2.3"
 
     //Navigation Component
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
@@ -69,9 +71,16 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.3.1")
+
+    //Camera X
+    implementation ("androidx.camera:camera-core:${cameraVersion}")
+    implementation ("androidx.camera:camera-camera2:${cameraVersion}")
+    implementation ("androidx.camera:camera-lifecycle:${cameraVersion}")
+    implementation ("androidx.camera:camera-view:${cameraVersion}")
+    implementation ("androidx.camera:camera-extensions:${cameraVersion}")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
